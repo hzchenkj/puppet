@@ -1,0 +1,11 @@
+### config by  puppet ###
+[main]
+    logdir = /var/log/puppet
+    rundir = /var/run/puppet
+    ssldir = $vardir/ssl
+[agent]
+    classfile = $vardir/classes.txt
+    localconfig = $vardir/localconfig
+    server = <%= scope.lookupvar('puppet::params::puppetserver') %>
+    certname = <%= scope.lookupvar('puppet::params::certname') %>
+    runinterval = 10

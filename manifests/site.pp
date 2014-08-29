@@ -1,7 +1,8 @@
 $puppetserver = 'master.domain.com'
 
 class environments{
-	include motd,puppet,ssh
+# ssh yum
+	include motd,puppet,nginx
 }
 
 
